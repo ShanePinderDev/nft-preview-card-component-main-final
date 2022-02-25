@@ -1,0 +1,297 @@
+/*
+Visual scale 
+
+2.488rem/39.81px	A Visual Type Scale
+2.074rem/33.18px	A Visual Type Scale
+1.728rem/27.65px	A Visual Type Scale
+1.44rem/23.04px	A Visual Type Scale
+1.2rem/19.20px	A Visual Type Scale
+1rem/16.00px	A Visual Type Scale
+0.833rem/13.33px	A Visual Type Scale
+0.694rem/11.11px	A Visual Type Scale
+0.579rem/9.26px	A Visual Type Scale
+*/
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Typography */
+body {
+  background-color: #02192c;
+  color: #fff;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+  font-size: 1em;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.heading,
+.text,
+.promotion {
+  margin-bottom: 1rem;
+}
+
+.heading {
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 28px;
+  align-self: flex-start;
+}
+
+.text {
+  font-size: 1.125rem;
+  line-height: 26px;
+  color: #c4c4c4;
+}
+
+.eth-text {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  line-height: 19px;
+  color: #00fff8;
+}
+
+.days-left-text {
+  font-size: 0.9375rem;
+  line-height: 19px;
+  color: #c4c4c4;
+}
+
+.creator-text,
+.creator-name {
+  font-weight: 400;
+  font-size: 0.9375rem;
+  line-height: 19px;
+}
+
+.creator-text {
+  color: #c4c4c4;
+}
+
+.creator-name {
+  color: #fff;
+}
+/* Layout */
+
+.container {
+  max-width: 20.438em;
+  background-color: #15263f;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5em;
+  border-radius: 8px;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.promotion {
+  width: 17.375em;
+  display: flex;
+  flex-direction: row;
+  align-self: flex-start;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  border-bottom: 1px solid #2e405a;
+}
+
+.eth {
+  width: 5.531em;
+  display: flex;
+  gap: 0.5em;
+}
+
+.days-left {
+  display: flex;
+  width: 5.794em;
+  gap: 0.5em;
+}
+
+.creator {
+  width: 13.688em;
+  display: flex;
+  align-self: flex-start;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.creator-img {
+  height: 33px;
+  width: 33px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
+.icon-view-svg {
+  display: none;
+}
+
+.container:active .background-img {
+  position: relative;
+}
+
+.container:active .overlay {
+  background-color: rgba(0, 255, 247, 0.5);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+.container:active .icon-view-svg {
+  display: block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.container:active .heading {
+  color: #00fff8;
+}
+
+.container:active .creator-name {
+  color: #00fff8;
+}
+
+.background-img {
+  height: 17.375em;
+  width: 17.375em;
+  background-image: url("images/image-equilibrium.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 1em;
+  border-radius: 8px;
+}
+
+.attribution {
+  color: #c4c4c4;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  /* color: hsl(228, 45%, 44%); */
+  color: #8bacd9;
+}
+
+@media (min-width: 1440px) {
+  .container {
+    max-width: 21.875em;
+  }
+
+  .background-img {
+    height: 18.875em;
+    width: 18.875em;
+  }
+
+  .text {
+    color: #8bacd9;
+  }
+
+  .eth,
+  .days-left {
+    width: 5.843em;
+  }
+
+  .eth-text {
+    line-height: 20px;
+  }
+
+  .creator {
+    width: 14.375em;
+  }
+
+  .creator-text {
+    font-size: 1rem;
+    line-height: 20px;
+    color: #8bacd9;
+  }
+
+  .creator-name {
+    font-size: 1rem;
+    line-height: 20px;
+  }
+}
